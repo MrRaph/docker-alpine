@@ -5,7 +5,7 @@ MAINTAINER nimmis <kjell.havneskold@gmail.com>
 COPY rootfs/ /
 
 RUN apk update && apk upgrade && \
-    apk add ca-certificates rsyslog supervisor supervisor-stdout && \
+    apk add ca-certificates rsyslog supervisor && \
     chmod +x /my_* && \
     mkdir /etc/my_runonce /etc/my_runalways /etc/container_environment /etc/workaround-docker-2267 /var/log/supervisor && \
     touch /var/log/startup.log && chmod 666 /var/log/startup.log && \
